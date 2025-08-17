@@ -1,0 +1,61 @@
+Look at the code editor in the file Main.java. 
+We have created a Main class with no method except main() and the class constructor.
+
+Run the code and observe the output.
+
+Notice that main() is very lengthy and contains many print statements. The repetitive code can be tedious to write if we need to make more than five deposits.
+
+In this lesson, we’ll learn how to make methods to deposit, withdraw, and check account balance for the SavingsAccount class.
+
+link:
+https://www.codecademy.com/courses/learn-java/lessons/learn-java-methods/exercises/introduction
+
+
+Main.java
+public class Main {
+  public static void main(String[] args) {
+    SavingsAccount savings = new SavingsAccount(2000);
+      
+    // Check balance:
+    System.out.println("Hello!");
+    System.out.println("Your balance is " + savings.balance);
+      
+    // Withdrawing:
+    int afterWithdraw = savings.balance - 300;
+    savings.balance = afterWithdraw;
+    System.out.println("You just withdrew " + 300);
+      
+    // Check balance:
+    System.out.println("Hello!");
+    System.out.println("Your balance is " + savings.balance);
+      
+    // Deposit:
+    int afterDeposit = savings.balance + 600;
+    savings.balance = afterDeposit;
+    System.out.println("You just deposited " + 600);
+      
+    // Check balance:
+    System.out.println("Hello!");
+    System.out.println("Your balance is " + savings.balance);
+      
+    // Deposit:
+    int afterDeposit2 = savings.balance + 600;
+    savings.balance = afterDeposit2;
+    System.out.println("You just deposited " + 600);
+      
+    // Check balance:
+    System.out.println("Hello!");
+    System.out.println("Your balance is " + savings.balance);
+  }
+}
+
+SavingsAccount.java
+public class SavingsAccount {
+  
+  int balance;
+    
+  public SavingsAccount(int initialBalance){
+    balance = initialBalance;
+  }
+    
+}
